@@ -1,4 +1,5 @@
 
+#treinando graficos
 train <- read.csv(file="Documents/pythonprogram/Codigos-de-Data-Science/train.csv",header =TRUE)
 head(train)
 
