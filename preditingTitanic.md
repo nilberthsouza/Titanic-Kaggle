@@ -1,26 +1,21 @@
+#Algoritmo para prever sobreviventes no titanic
 
 
-
-
+primeiro carregaremos o dataset de treino ```train.csv``` 
 ```{r}
-titanic.train <- read.csv(file="Documents/pythonprogram/Codigos-de-Data-Science/train.csv",stringsAsFactors = FALSE,  header=TRUE)
-
-head(titanic.train)
+titanic.train <- read.csv(file="train.csv",stringsAsFactors = FALSE,  header=TRUE)
 
 ```
-
-
-
-
+Agora carregaremos o dataset de test ```test.csv``` :
 
 ```{r}
-titanic.test <- read.csv(file="Documents/pythonprogram/Codigos-de-Data-Science/test.csv",stringsAsFactors = FALSE,  header=TRUE)
-head(titanic.train)
-
+titanic.test <- read.csv(file="test.csv",stringsAsFactors = FALSE,  header=TRUE)
 
 ```
+Na primeira linha abaixo checamos a media das idades e como o valor retornado é ```NA```, na linha seguinte setamos
 
 
+```na.rm=TRUE``` para não considerar os valores não disponveis na contagem e fazemos o mesmo para o dataframe de test:
 
 ```{r}
 median(titanic.train$Age)
