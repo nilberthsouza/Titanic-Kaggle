@@ -1,7 +1,6 @@
-#Algoritmo para prever sobreviventes no titanic
+# Algoritmo para prever sobreviventes no titanic
 
-
-primeiro carregaremos o dataset de treino ```train.csv``` 
+Primeiro carregaremos o dataset de treino ```train.csv``` 
 ```{r}
 titanic.train <- read.csv(file="train.csv",stringsAsFactors = FALSE,  header=TRUE)
 
@@ -130,9 +129,6 @@ titanic.model <- randomForest(formula= survived.formula, data= titanic.train, nt
 
 
 ```{r}
-
-
-library(randomForest)
 
 titanic.model <- randomForest(formula= survived.formula, data= titanic.train, ntree= 500, mtry = 3, nodesize = 0.01 * nrow(titanic.test))
 
