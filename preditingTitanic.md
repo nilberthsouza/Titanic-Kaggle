@@ -22,6 +22,7 @@ median(titanic.train$Age, na.rm=TRUE)
 median(titanic.test$Age, na.rm=TRUE)
 
 ```
+Para tratar e limpar os dataframes pra evitar de reescrever o códígo duas vezes , vamos criar uma coluna no ```titanic.train``` chama ```IsTrainSet``` e setaremos todos os valores para ```TRUE``` . Já em  ```titanic.test``` faremos o mesmo e setaremos a coluna com o valor false
 
 ```{r}
 titanic.train$IsTrainSet <- TRUE
@@ -43,6 +44,7 @@ names(titanic.test)
 titanic.test$Survived <- NA
 ncol(titanic.test)
 ```
+Agora faaremos um merge de ```titanic.train``` e ```titanic.test``` em ```titanic.full``` assim manipularemos apenas um dataframe na limpeza.
 
 ```{r}
 titanic.full <- rbind(titanic.train, titanic.test)
