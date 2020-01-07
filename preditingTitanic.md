@@ -68,6 +68,7 @@ table(titanic.full$Embarked)
 titanic.full$Embarked == ""
 
 ```
+Vamos substituir na coluna ```Embarked``` os valores vazios por "S" , que é o valor com maior numero de ocorrencias.
 
 ```{r}
 
@@ -76,14 +77,14 @@ table(titanic.full$Embarked)
 
 ```
 
-
+Definimos duas variaveis com valor da media da idade e do fare respectivamente
 ```{r}
 
 age.median <- median(titanic.full$Age, na.rm=TRUE)
 fare.median <- median(titanic.full$Fare, na.rm=TRUE)
 
 ```
-
+Agora inserimos a media do Age nos valores vazios da coluna
 
 ```{r}
 titanic.full[is.na(titanic.full$Age),"Age"] <- age.median
