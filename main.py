@@ -1,5 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+
+
 df = pd.read_csv("train.csv")
 fig = plt.figure(figsize=(18,6))
 

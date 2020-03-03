@@ -97,14 +97,14 @@ fare.median <- median(titanic.full$Fare, na.rm = TRUE)
 titanic.full[is.na(titanic.full$Fare),"Fare"] <- fare.median
 ```
 
-
+Algoritimos de IA não trabalham muito bem com etiquetas. Então vamos transformar em fatos 
 ```{r}
 titanic.full$Pclass <- as.factor(titanic.full$Pclass)
 titanic.full$Sex <- as.factor(titanic.full$Sex)
 titanic.full$Embarked <- as.factor(titanic.full$Embarked)
 ```
 
-
+agora vamos splitar o dataset full
 ```{r}
 titanic.train <- titanic.full[titanic.full$IsTrainSet == TRUE,]
 titanic.test <- titanic.full[titanic.full$IsTrainSet == FALSE,]
